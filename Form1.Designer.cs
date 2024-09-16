@@ -39,6 +39,9 @@
             dt_NS = new DateTimePicker();
             txt_SDT = new TextBox();
             txt_GT = new TextBox();
+            dtG_Thongtin = new DataGridView();
+            btn_xoa = new Button();
+            ((System.ComponentModel.ISupportInitialize)dtG_Thongtin).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -131,12 +134,32 @@
             txt_GT.Size = new Size(100, 27);
             txt_GT.TabIndex = 1;
             // 
+            // dtG_Thongtin
+            // 
+            dtG_Thongtin.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtG_Thongtin.Location = new Point(23, 225);
+            dtG_Thongtin.Name = "dtG_Thongtin";
+            dtG_Thongtin.Size = new Size(589, 187);
+            dtG_Thongtin.TabIndex = 4;
+            // 
+            // btn_xoa
+            // 
+            btn_xoa.Location = new Point(301, 146);
+            btn_xoa.Name = "btn_xoa";
+            btn_xoa.Size = new Size(98, 65);
+            btn_xoa.TabIndex = 2;
+            btn_xoa.Text = "Xóa";
+            btn_xoa.UseVisualStyleBackColor = true;
+            btn_xoa.Click += btn_nhap_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(9F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(440, 424);
+            ClientSize = new Size(633, 424);
+            Controls.Add(dtG_Thongtin);
             Controls.Add(dt_NS);
+            Controls.Add(btn_xoa);
             Controls.Add(btn_nhap);
             Controls.Add(txt_GT);
             Controls.Add(txt_SDT);
@@ -151,6 +174,7 @@
             Margin = new Padding(4);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dtG_Thongtin).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,5 +192,7 @@
         private DateTimePicker dt_NS;
         private TextBox txt_SDT;
         private TextBox txt_GT;
+        private DataGridView dtG_Thongtin;
+        private Button btn_xoa;
     }
 }

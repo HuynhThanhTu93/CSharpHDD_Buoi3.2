@@ -8,21 +8,30 @@ namespace CSharpHDD_Buoi3._2
 {
     internal class SinhVien
     {
-       private int mSSV;
+       private string mSSV;
        private string hoTen;
        private DateTime ngaySinh;
        private string sDT;
        private string gioiTinh;
+        public string MSSV { get => mSSV; set => mSSV = value; }
+        public string HoTen { get => hoTen; set => hoTen = value; }
+        public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
+        public string SDT { get => sDT; set => sDT = value; }
+        public string GioiTinh { get => gioiTinh; set => gioiTinh = value; }
+        // Viết hàm khỏi tạo:
+        // Hàm khởi tạo ko có tham số:
+        public SinhVien() { }
 
-        public void setMSSV(int mSSV) { this.mSSV = mSSV; }
-        public int getMSSV() { return this.mSSV; }
-        public void setHoten(string hoTen) { this.hoTen = hoTen; }
-        public string getHoten() { return this.hoTen; }
-        public void setNgaysinh(DateTime ngaySinh) { this.ngaySinh = ngaySinh; }
-        public DateTime getNgaysinh() { return this.ngaySinh; }
-        public void setSdt(string sDT) { this.sDT = sDT; }
-        public string getSdt() { return this.sDT; }
-        public void setGioitinh(string gioiTinh) { this.gioiTinh = gioiTinh; }
-        public string getGioitinh() { return this.gioiTinh; }
+        // hàm khởi tạo có tham số:
+        public SinhVien(string mSSV, string hoTen, DateTime ngaySinh, string sDT, string gioiTinh)
+        {
+            this.MSSV = mSSV;
+            this.HoTen = hoTen;
+            this.NgaySinh=ngaySinh;
+            this.SDT = sDT;
+            this.GioiTinh=gioiTinh;
+        }
+
+      
     }
 }
